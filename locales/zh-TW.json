@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "首頁",
+    "products": "產品",
+    "simulator": "熱模擬器",
+    "about": "關於我們",
+    "contact": "聯絡我們"
+  },
+  "hero": {
+    "eyebrow": "工業電池解決方案",
+    "headline": "為動力工程打造未來",
+    "sub": "免費執行電池組認證熱模擬，由我們驗證的電芯化學算法驅動。",
+    "cta_sim": "啟動模擬器",
+    "cta_rfq": "索取報價",
+    "tagline": "以心傳電"
+  },
+  "stats": {
+    "cells": "電芯配置",
+    "crate": "最大放電倍率",
+    "temp": "熱精度",
+    "verified": "鏈上驗證"
+  },
+  "simulator": {
+    "title": "電池熱模擬器",
+    "sub": "配置您的電池組並實時查看熱點。",
+    "cell_count": "電芯數量",
+    "c_rate": "放電倍率 (C)",
+    "ambient": "環境溫度 (°C)",
+    "run": "執行模擬",
+    "running": "模擬中...",
+    "download": "下載認證報告",
+    "max_temp": "峰值溫度",
+    "avg_temp": "平均溫度",
+    "hash": "驗證編號",
+    "status": "本地簽署 — 企業帳本遷移待定"
+  },
+  "products": {
+    "title": "產品系列",
+    "sub": "為嚴苛應用精密製造的電芯。",
+    "verify": "在帳本上驗證"
+  },
+  "contact": {
+    "title": "申請生產運行",
+    "sub": "告訴我們您的電池組配置，我們將在24小時內回覆。",
+    "name": "姓名",
+    "email": "電子郵件",
+    "message": "電池組需求",
+    "send": "發送請求"
+  },
+  "footer": {
+    "rights": "版權所有。",
+    "privacy": "隱私政策"
+  }
+}
