@@ -128,24 +128,24 @@ www.skpbattery.com`;
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           {[
             { label: t.cell_count, value: cellCount, min: 4, max: 100, step: 1,
-              set: setCellCount, unit: "" },
-            { label: t.c_rate, value: cRate, min: 0.1, max: 5, step: 0.1,
-              set: setCRate, unit: "C" },
-            { label: t.ambient, value: ambientTemp, min: -20, max: 60, step: 1,
-              set: setAmbientTemp, unit: "°C" },
-          ].map(({ label, value, min, max, step, set, unit }) => (
+                onChange: (v: number) => setCellCount(v), unit: "" },
+              { label: t.c_rate, value: cRate, min: 0.1, max: 5, step: 0.1,
+                onChange: (v: number) => setCRate(v), unit: "C" },
+              { label: t.ambient, value: ambientTemp, min: -20, max: 60, step: 1,
+                onChange: (v: number) => setAmbientTemp(v), unit: "°C" },
+              ].map(({ label, value, min, max, step, onChange, unit }) => (
             <div key={label}>
               <div style={{ display: "flex", justifyContent: "space-between",
                 marginBottom: "0.5rem" }}>
                 <label style={{ color: "var(--sky-gray)", fontSize: "0.85rem",
                   fontWeight: 500 }}>{label}</label>
-                <span style={{ color: "white", fontWeight: 700, fontFamily: "monospace" }}>
+                <span style={{ color: "var(--sky-text)", fontWeight: 700, fontFamily: "monospace" }}>
                   {value}{unit}
                 </span>
               </div>
               <input type="range" min={min} max={max} step={step}
                 value={value}
-                onChange={(e) => set(Number(e.target.value))}
+                onChange={(e) => { onChange(Number(e.target.value)); }}
                 style={{ width: "100%", accentColor: "var(--sky-red)", cursor: "pointer" }} />
               <div style={{ display: "flex", justifyContent: "space-between",
                 color: "var(--sky-muted)", fontSize: "0.75rem", marginTop: "0.25rem" }}>

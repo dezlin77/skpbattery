@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import Navbar from "@/components/Navbar";
@@ -18,8 +18,8 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
 
         {/* HERO */}
         <section style={{ minHeight: "90vh", display: "flex", alignItems: "center",
-          padding: "4rem 2rem", maxWidth: "1200px", margin: "0 auto",
-          gap: "4rem", flexWrap: "wrap" }}>
+  padding: "2rem 2rem 4rem", maxWidth: "1200px", margin: "0 auto",
+  gap: "4rem", flexWrap: "wrap" }}>
           <div style={{ flex: "1", minWidth: "300px" }}>
             <p style={{ color: "var(--sky-red)", fontWeight: 600,
               letterSpacing: "0.1em", textTransform: "uppercase",
@@ -27,7 +27,7 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
               {t.hero.eyebrow}
             </p>
             <h1 style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-              marginBottom: "1.5rem", color: "white" }}>
+              marginBottom: "1.5rem", color: "var(--sky-text)" }}>
               {t.hero.headline}
             </h1>
             <p style={{ color: "var(--sky-gray)", fontSize: "1.15rem",
@@ -42,20 +42,21 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
                 {t.hero.cta_sim} →
               </Link>
               <Link href="#contact"
-                style={{ background: "transparent", color: "white",
+                style={{ background: "transparent", color: "var(--sky-text)",
                   padding: "0.85rem 2rem", borderRadius: "8px",
                   fontWeight: 600, fontSize: "1rem",
-                  border: "1px solid var(--sky-border)" }}>
+                  border: "1px solid #CBD5E1" }}>
                 {t.hero.cta_rfq}
               </Link>
             </div>
           </div>
 
           <div style={{ flex: "1", minWidth: "300px", position: "relative" }}>
-            <Image src="/images/battery1.jpg" alt="Sky Power Battery Cells"
+            <img src="/images/battery1.jpg" alt="Sky Power Battery Cells"
               width={600} height={400}
-              style={{ width: "100%", height: "auto", borderRadius: "16px",
-                objectFit: "cover", border: "1px solid var(--sky-border)" }}
+              style={{ width: "100%", height: "400px",
+  objectFit: "cover", borderRadius: "16px",
+  border: "1px solid var(--sky-border)" }}
               priority />
             <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem",
               background: "rgba(10,15,30,0.85)", backdropFilter: "blur(8px)",
@@ -63,7 +64,7 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
               padding: "0.75rem 1.25rem" }}>
               <p style={{ color: "var(--sky-red)", fontSize: "0.7rem",
                 fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>
-                Tagline
+                Sky Power (US)
               </p>
               <p style={{ color: "white", fontWeight: 600, fontSize: "0.95rem" }}>
                 {t.hero.tagline}
@@ -119,24 +120,24 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
                 { name: "SKP-26650-5000", chem: "LFP", cap: "5000mAh", volt: "3.2V", crate: "2C" },
               ].map((p) => (
                 <div key={p.name}
-                  style={{ background: "var(--sky-navy)", border: "1px solid var(--sky-border)",
+                  style={{ background: "white", border: "1px solid var(--sky-border)",
                     borderRadius: "12px", padding: "1.5rem",
                     transition: "border-color 0.2s" }}
                   onMouseEnter={e => (e.currentTarget.style.borderColor = "var(--sky-red)")}
                   onMouseLeave={e => (e.currentTarget.style.borderColor = "var(--sky-border)")}>
-                  <Image src="/images/battery2.png" alt={p.name}
+                  <img src="/images/battery2.png" alt={p.name}
                     width={200} height={120}
                     style={{ width: "100%", height: "120px",
                       objectFit: "contain", marginBottom: "1rem" }} />
                   <h3 style={{ fontFamily: "monospace", fontSize: "1rem",
-                    marginBottom: "1rem", color: "white" }}>{p.name}</h3>
+                    marginBottom: "1rem", color: "var(--sky-text)" }}>{p.name}</h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
                     {[["Chemistry", p.chem], ["Capacity", p.cap],
                       ["Voltage", p.volt], ["Max Rate", p.crate]].map(([k, v]) => (
                       <div key={k} style={{ display: "flex",
                         justifyContent: "space-between", fontSize: "0.82rem" }}>
                         <span style={{ color: "var(--sky-muted)" }}>{k}</span>
-                        <span style={{ color: "white", fontWeight: 600 }}>{v}</span>
+                        <span style={{ color: "var(--sky-text)", fontWeight: 600 }}>{v}</span>
                       </div>
                     ))}
                   </div>
@@ -174,17 +175,17 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
             ].map(({ key, type, placeholder }) => (
               <input key={key} type={type} placeholder={placeholder}
                 style={{ background: "var(--sky-navy-light)",
-                  border: "1px solid var(--sky-border)", color: "white",
+                  border: "1px solid var(--sky-border)", color: "var(--sky-text)",
                   padding: "0.85rem 1rem", borderRadius: "8px",
                   fontSize: "0.95rem", outline: "none", width: "100%" }} />
             ))}
             <textarea placeholder={t.contact.message} rows={5}
               style={{ background: "var(--sky-navy-light)",
-                border: "1px solid var(--sky-border)", color: "white",
+                border: "1px solid var(--sky-border)", color: "var(--sky-text)",
                 padding: "0.85rem 1rem", borderRadius: "8px",
                 fontSize: "0.95rem", outline: "none",
                 resize: "vertical", width: "100%" }} />
-            <button style={{ background: "var(--sky-red)", color: "white",
+            <button style={{ background: "var(--sky-red)", color: "var(--sky-text)",
               border: "none", padding: "0.9rem", borderRadius: "8px",
               fontSize: "1rem", fontWeight: 700, cursor: "pointer",
               width: "100%" }}>
@@ -197,7 +198,7 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
         <footer style={{ borderTop: "1px solid var(--sky-border)",
           padding: "2rem", textAlign: "center",
           color: "var(--sky-muted)", fontSize: "0.8rem" }}>
-          <Image src="/images/skypowerlogo2.png" alt="Sky Power"
+          <img src="/images/skypowerlogo2.png" alt="Sky Power"
             width={32} height={32}
             style={{ objectFit: "contain", marginBottom: "0.75rem" }} />
           <p>© {new Date().getFullYear()} Sky Power (US). {t.footer.rights}</p>

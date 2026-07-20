@@ -19,14 +19,14 @@ export default function Navbar({ t }: { t: Record<string, Record<string, string>
   return (
     <nav style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-      background: "rgba(10,15,30,0.92)", backdropFilter: "blur(12px)",
+      background: "rgba(255,255,255,0.95)", backdropFilter: "blur(12px)",
       borderBottom: "1px solid var(--sky-border)",
       padding: "0 2rem", height: "64px",
       display: "flex", alignItems: "center", justifyContent: "space-between",
     }}>
       {/* Logo */}
       <Link href="/">
-        <Image src="/images/skypowerlogo1.png" alt="Sky Power" width={140} height={36}
+        <img src="/images/skypowerlogo1.png" alt="Sky Power" width={140} height={36}
           style={{ objectFit: "contain" }} priority />
       </Link>
 

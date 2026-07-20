@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --sky-navy: #0A0F1E;
-  --sky-navy-light: #111827;
+  --sky-navy: #FFFFFF;
+  --sky-navy-light: #F8FAFC;
   --sky-red: #E02020;
   --sky-red-dim: #991414;
-  --sky-blue: #1E90FF;
-  --sky-gray: #8892A4;
-  --sky-border: #1E2A3A;
-  --sky-text: #E8EDF5;
-  --sky-muted: #64748B;
+  --sky-blue: #1565C0;
+  --sky-gray: #475569;
+  --sky-border: #E2E8F0;
+  --sky-text: #0F172A;
+  --sky-muted: #94A3B8;
 }
 
 * {
@@ -46,7 +46,6 @@ a {
   color: white;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--sky-navy); }
-::-webkit-scrollbar-thumb { background: var(--sky-border); border-radius: 3px; }
+::-webkit-scrollbar-track { background: #F1F5F9; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
