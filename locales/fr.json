@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "simulator": "Simulateur Thermique",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Solutions de Batteries Industrielles",
+    "headline": "Ingénierie pour l'Avenir de l'Énergie",
+    "sub": "Exécutez une simulation thermique certifiée et gratuite de votre pack de batteries.",
+    "cta_sim": "Lancer le Simulateur",
+    "cta_rfq": "Demander un Devis",
+    "tagline": "Mettre le Cœur dans l'Énergie"
+  },
+  "stats": {
+    "cells": "Configurations de Cellules",
+    "crate": "Taux C Maximum",
+    "temp": "Précision Thermique",
+    "verified": "Vérifié sur Chaîne"
+  },
+  "simulator": {
+    "title": "Simulateur Thermique de Batteries",
+    "sub": "Configurez votre pack et visualisez les points chauds en temps réel.",
+    "cell_count": "Nombre de Cellules",
+    "c_rate": "Taux de Décharge (C)",
+    "ambient": "Température Ambiante (°C)",
+    "run": "Lancer la Simulation",
+    "running": "Simulation en cours...",
+    "download": "Télécharger le Rapport Certifié",
+    "max_temp": "Température de Pointe",
+    "avg_temp": "Température Moyenne",
+    "hash": "ID de Vérification",
+    "status": "Signé Localement — Migration vers Ledger Entreprise en Attente"
+  },
+  "products": {
+    "title": "Gamme de Produits",
+    "sub": "Cellules de précision pour applications exigeantes.",
+    "verify": "Vérifier sur Ledger"
+  },
+  "contact": {
+    "title": "Demander une Production",
+    "sub": "Partagez votre configuration et nous répondrons sous 24 heures.",
+    "name": "Nom Complet",
+    "email": "Adresse Email",
+    "message": "Exigences du Pack",
+    "send": "Envoyer la Demande"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité"
+  }
+}

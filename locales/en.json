@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "simulator": "Thermal Simulator",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Industrial Battery Solutions",
+    "headline": "Engineer the Future of Power",
+    "sub": "Run a free certified thermal simulation of your battery pack — powered by our verified cell chemistry algorithms.",
+    "cta_sim": "Launch Simulator",
+    "cta_rfq": "Request a Quote",
+    "tagline": "Bring Heart To Power"
+  },
+  "stats": {
+    "cells": "Cell Configurations",
+    "crate": "Max C-Rate",
+    "temp": "Thermal Accuracy",
+    "verified": "On-Chain Verified"
+  },
+  "simulator": {
+    "title": "Battery Thermal Simulator",
+    "sub": "Configure your pack and see thermal hotspots in real time.",
+    "cell_count": "Cell Count",
+    "c_rate": "Discharge Rate (C)",
+    "ambient": "Ambient Temperature (°C)",
+    "run": "Run Simulation",
+    "running": "Simulating...",
+    "download": "Download Certified Report",
+    "max_temp": "Peak Temperature",
+    "avg_temp": "Average Temperature",
+    "hash": "Verification ID",
+    "status": "Locally Signed — Enterprise Ledger Migration Pending"
+  },
+  "products": {
+    "title": "Product Line",
+    "sub": "Precision-engineered cells for demanding applications.",
+    "verify": "Verify on Ledger"
+  },
+  "contact": {
+    "title": "Request a Production Run",
+    "sub": "Tell us your pack configuration and we will respond within 24 hours.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "message": "Pack Requirements",
+    "send": "Send Request"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy"
+  }
+}

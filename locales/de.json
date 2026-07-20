@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "simulator": "Thermischer Simulator",
+    "about": "Über Uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Industrielle Batterielösungen",
+    "headline": "Ingenieurskunst für die Zukunft der Energie",
+    "sub": "Führen Sie eine kostenlose zertifizierte Thermalsimulation Ihres Batteriepakets durch.",
+    "cta_sim": "Simulator Starten",
+    "cta_rfq": "Angebot Anfordern",
+    "tagline": "Herz in die Energie bringen"
+  },
+  "stats": {
+    "cells": "Zellkonfigurationen",
+    "crate": "Max. C-Rate",
+    "temp": "Thermische Genauigkeit",
+    "verified": "On-Chain Verifiziert"
+  },
+  "simulator": {
+    "title": "Batterie-Thermalsimulator",
+    "sub": "Konfigurieren Sie Ihr Paket und sehen Sie Hotspots in Echtzeit.",
+    "cell_count": "Zellanzahl",
+    "c_rate": "Entladerate (C)",
+    "ambient": "Umgebungstemperatur (°C)",
+    "run": "Simulation Starten",
+    "running": "Simuliere...",
+    "download": "Zertifizierten Bericht Herunterladen",
+    "max_temp": "Spitzentemperatur",
+    "avg_temp": "Durchschnittstemperatur",
+    "hash": "Verifikations-ID",
+    "status": "Lokal Signiert — Enterprise-Ledger-Migration Ausstehend"
+  },
+  "products": {
+    "title": "Produktlinie",
+    "sub": "Präzisionsgefertigte Zellen für anspruchsvolle Anwendungen.",
+    "verify": "Im Ledger Verifizieren"
+  },
+  "contact": {
+    "title": "Produktionslauf Anfordern",
+    "sub": "Teilen Sie uns Ihre Paketkonfiguration mit und wir antworten innerhalb von 24 Stunden.",
+    "name": "Vollständiger Name",
+    "email": "E-Mail-Adresse",
+    "message": "Paketanforderungen",
+    "send": "Anfrage Senden"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie"
+  }
+}
