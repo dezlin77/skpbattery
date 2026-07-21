@@ -173,21 +173,42 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
               { key: "email", type: "email", placeholder: t.contact.email },
             ].map(({ key, type, placeholder }) => (
               <input key={key} type={type} placeholder={placeholder}
+                id={`contact-${key}`}
                 style={{ background: "var(--sky-navy-light)",
                   border: "1px solid var(--sky-border)", color: "var(--sky-text)",
                   padding: "0.85rem 1rem", borderRadius: "8px",
                   fontSize: "0.95rem", outline: "none", width: "100%" }} />
             ))}
-            <textarea placeholder={t.contact.message} rows={5}
+            <textarea placeholder={t.contact.message} rows={5} id="contact-message"
               style={{ background: "var(--sky-navy-light)",
                 border: "1px solid var(--sky-border)", color: "var(--sky-text)",
                 padding: "0.85rem 1rem", borderRadius: "8px",
                 fontSize: "0.95rem", outline: "none",
                 resize: "vertical", width: "100%" }} />
-            <button style={{ background: "var(--sky-red)", color: "var(--sky-text)",
-              border: "none", padding: "0.9rem", borderRadius: "8px",
-              fontSize: "1rem", fontWeight: 700, cursor: "pointer",
-              width: "100%" }}>
+            <p style={{ color: "var(--sky-gray)", fontSize: "0.85rem" }}>
+              Or email us directly: <a href="mailto:ken@skpbattery.com"
+                style={{ color: "var(--sky-red)", fontWeight: 600 }}>
+                ken@skpbattery.com
+              </a>
+            </p>
+            <button
+              onClick={async () => {
+                const name = (document.getElementById("contact-name") as HTMLInputElement)?.value;
+                const email = (document.getElementById("contact-email") as HTMLInputElement)?.value;
+                const message = (document.getElementById("contact-message") as HTMLTextAreaElement)?.value;
+                if (!name || !email || !message) return alert("Please fill all fields");
+                const res = await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ name, email, message }),
+                });
+                if (res.ok) alert("Request sent! We'll respond within 24 hours.");
+                else alert("Failed to send. Please email ken@skpbattery.com directly.");
+              }}
+              style={{ background: "var(--sky-red)", color: "white",
+                border: "none", padding: "0.9rem", borderRadius: "8px",
+                fontSize: "1rem", fontWeight: 700, cursor: "pointer",
+                width: "100%" }}>
               {t.contact.send}
             </button>
           </div>
