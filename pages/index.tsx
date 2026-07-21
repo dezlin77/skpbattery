@@ -56,8 +56,7 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
               width={600} height={400}
               style={{ width: "100%", height: "400px",
   objectFit: "cover", borderRadius: "16px",
-  border: "1px solid var(--sky-border)" }}
-              priority />
+  border: "1px solid var(--sky-border)" }} />
             <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem",
               background: "rgba(10,15,30,0.85)", backdropFilter: "blur(8px)",
               border: "1px solid var(--sky-border)", borderRadius: "8px",

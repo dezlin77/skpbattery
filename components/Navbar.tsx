@@ -27,7 +27,7 @@ export default function Navbar({ t }: { t: Record<string, Record<string, string>
       {/* Logo */}
       <Link href="/">
         <img src="/images/skypowerlogo1.png" alt="Sky Power" width={140} height={36}
-          style={{ objectFit: "contain" }} priority />
+          style={{ objectFit: "contain" }} />
       </Link>
 
       {/* Desktop Nav */}
