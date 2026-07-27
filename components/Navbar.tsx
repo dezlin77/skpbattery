@@ -34,9 +34,9 @@ export default function Navbar({ t }: { t: Record<string, Record<string, string>
         {/* Desktop Nav */}
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}
           className="desktop-nav">
-          {["home", "products", "simulator", "contact"].map((key) => (
+          {["home", "products", "simulator", "blog", "contact"].map((key) => (
             <Link key={key}
-              href={key === "home" ? "/" : key === "simulator" ? "/#simulator" : `/#${key}`}
+              href={key === "home" ? "/" : key === "simulator" ? "/#simulator" : key === "blog" ? "/blog" : `/#${key}`}
               style={{ color: "var(--sky-gray)", fontSize: "0.9rem", fontWeight: 500 }}>
               {t.nav[key]}
             </Link>

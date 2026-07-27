@@ -4,7 +4,8 @@
     "products": "製品",
     "simulator": "熱シミュレーター",
     "about": "会社概要",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "blog": "ブログ"
   },
   "hero": {
     "eyebrow": "産業用バッテリーソリューション",
@@ -50,5 +51,12 @@
   "footer": {
     "rights": "全著作権所有。",
     "privacy": "プライバシーポリシー"
+  },
+  "blog": {
+  "title": "技術ブログ",
+  "sub": "バッテリーエンジニアからのインサイト。",
+  "read_more": "続きを読む",
+  "back": "ブログに戻る",
+  "published": "公開日"
   }
 }

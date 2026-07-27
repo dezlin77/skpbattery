@@ -49,3 +49,16 @@ a {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #F1F5F9; }
 ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+
+/* Blog article styles */
+article h2 { font-size: 1.6rem; margin: 2rem 0 0.75rem; color: var(--sky-text); }
+article h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; color: var(--sky-text); }
+article p { margin-bottom: 1.25rem; }
+article ul, article ol { margin: 0 0 1.25rem 1.5rem; }
+article li { margin-bottom: 0.4rem; }
+article table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+article th { background: var(--sky-navy-light); padding: 0.6rem 1rem; text-align: left; border: 1px solid var(--sky-border); font-weight: 600; }
+article td { padding: 0.6rem 1rem; border: 1px solid var(--sky-border); }
+article strong { font-weight: 700; color: var(--sky-text); }
+article a { color: var(--sky-red); }
+article blockquote { border-left: 3px solid var(--sky-red); padding-left: 1rem; color: var(--sky-gray); margin: 1.5rem 0; }

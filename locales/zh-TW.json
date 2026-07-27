@@ -4,7 +4,8 @@
     "products": "產品",
     "simulator": "熱模擬器",
     "about": "關於我們",
-    "contact": "聯絡我們"
+    "contact": "聯絡我們",
+    "blog": "部落格"
   },
   "hero": {
     "eyebrow": "工業電池解決方案",
@@ -50,5 +51,12 @@
   "footer": {
     "rights": "版權所有。",
     "privacy": "隱私政策"
+  },
+  "blog": {
+  "title": "技術部落格",
+  "sub": "來自我們電池工程師的見解。",
+  "read_more": "閱讀更多",
+  "back": "返回部落格",
+  "published": "發布於"
   }
 }

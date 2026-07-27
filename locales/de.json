@@ -4,7 +4,8 @@
     "products": "Produkte",
     "simulator": "Thermischer Simulator",
     "about": "Über Uns",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "blog": "Blog"
   },
   "hero": {
     "eyebrow": "Industrielle Batterielösungen",
@@ -50,5 +51,12 @@
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
     "privacy": "Datenschutzrichtlinie"
+  },
+  "blog": {
+  "title": "Technischer Blog",
+  "sub": "Einblicke von unseren Batterieingenieuren.",
+  "read_more": "Mehr lesen",
+  "back": "Zurück zum Blog",
+  "published": "Veröffentlicht am"
   }
 }
