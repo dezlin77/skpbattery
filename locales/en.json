@@ -13,7 +13,8 @@
     "sub": "Run a free certified thermal simulation of your battery pack — powered by our verified cell chemistry algorithms.",
     "cta_sim": "Launch Simulator",
     "cta_rfq": "Request a Quote",
-    "tagline": "Bring Heart To Power"
+    "tagline": "Bring Heart To Power",
+    "sub": "Free certified thermal simulation for your battery pack — small MOQ from 50 packs, fast re-design in days, built for extreme climates and high C-rate applications."
   },
   "stats": {
     "cells": "Cell Configurations",

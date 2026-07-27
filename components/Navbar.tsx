@@ -95,7 +95,7 @@ export default function Navbar({ t }: { t: Record<string, Record<string, string>
           flexDirection: "column", gap: "0.75rem",
           boxShadow: "0 4px 12px rgba(0,0,0,0.08)"
         }}>
-          {["home", "products", "simulator", "contact"].map((key) => (
+          {["home", "products", "simulator", "blog", "contact"].map((key) => (
             <Link key={key}
               href={key === "home" ? "/" : `/#${key}`}
               onClick={() => setMenuOpen(false)}

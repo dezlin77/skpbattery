@@ -13,6 +13,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 export default function Home({ t }: { t: Record<string, Record<string, string>> }) {
   return (
     <>
+      <head>
+        <title>Sky Power (US) — Small MOQ Battery Packs | High C-Rate | Extreme Climate</title>
+        <meta name="description" content="Custom lithium battery packs: small MOQ from 50 packs, fast re-design in days, extreme climate (-40°C to +85°C), high C-rate up to 5C. UL, CE, UN38.3, IEC 62133 certified." />
+        <meta name="keywords" content="small MOQ battery pack, high C-rate battery, extreme climate battery, drone battery, AGV battery, medical device battery, custom lithium battery, CAN bus BMS" />
+      </head>
       <Navbar t={t} />
       <main style={{ paddingTop: "64px" }}>
 
@@ -90,6 +95,74 @@ export default function Home({ t }: { t: Record<string, Record<string, string>> 
                   fontFamily: "Space Grotesk, sans-serif" }}>{value}</p>
                 <p style={{ color: "var(--sky-gray)", fontSize: "0.8rem",
                   marginTop: "0.25rem" }}>{label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* WHY CHOOSE US */}
+        <section style={{ padding: "5rem 2rem", maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ color: "var(--sky-red)", fontWeight: 600,
+            letterSpacing: "0.1em", textTransform: "uppercase",
+            fontSize: "0.8rem", marginBottom: "0.5rem" }}>
+            Why Sky Power (US)
+          </p>
+          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+            marginBottom: "3rem", maxWidth: "600px" }}>
+            Built for Engineers Who Can't Afford to Wait
+          </h2>
+          <div style={{ display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "2rem" }}>
+            {[
+              {
+                icon: "📦",
+                title: "Small MOQ",
+                desc: "Start from 50 packs for development builds. Scale to production without changing suppliers."
+              },
+              {
+                icon: "⚡",
+                title: "Fast Re-Design",
+                desc: "Design iterations in days, not months. Our engineers turn feedback into updated specs fast."
+              },
+              {
+                icon: "🌡️",
+                title: "Extreme Climate",
+                desc: "Certified for operation from -40°C to +85°C. Built for Arctic drones, desert AGVs, and everything between."
+              },
+              {
+                icon: "🔋",
+                title: "High C-Rate",
+                desc: "Up to 5C continuous discharge. Engineered for robotics, UAVs, and high-draw medical devices."
+              },
+              {
+                icon: "🔬",
+                title: "Thermal Expertise",
+                desc: "In-house thermal simulation and validation. Every pack ships with a certified thermal profile report."
+              },
+            ].map(({ icon, title, desc }) => (
+              <div key={title} style={{
+                padding: "1.5rem",
+                border: "1px solid var(--sky-border)",
+                borderRadius: "12px",
+                background: "white",
+                transition: "box-shadow 0.2s, border-color 0.2s"
+              }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = "var(--sky-red)";
+                  e.currentTarget.style.boxShadow = "0 4px 20px rgba(224,32,32,0.08)";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = "var(--sky-border)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}>
+                <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{icon}</div>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700,
+                  marginBottom: "0.5rem", color: "var(--sky-text)" }}>
+                  {title}
+                </h3>
+                <p style={{ color: "var(--sky-gray)", fontSize: "0.88rem",
+                  lineHeight: 1.6 }}>{desc}</p>
               </div>
             ))}
           </div>
