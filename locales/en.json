@@ -1,30 +1,65 @@
 {
   "nav": {
     "home": "Home",
-    "products": "Products",
+    "solutions": "Solutions",
     "simulator": "Thermal Simulator",
-    "about": "About",
+    "blog": "Blog",
     "contact": "Contact",
-    "blog": "Blog"
+    "for_startups": "For Startups"
   },
   "hero": {
-    "eyebrow": "Industrial Battery Solutions",
-    "headline": "Engineer the Future of Power",
-    "sub": "Run a free certified thermal simulation of your battery pack — powered by our verified cell chemistry algorithms.",
-    "cta_sim": "Launch Simulator",
-    "cta_rfq": "Request a Quote",
+    "eyebrow": "Battery Engineering Partner",
+    "headline": "Custom Battery Packs for Robotics & Industrial Hardware",
+    "sub": "Sky Power helps startups and engineering firms design and manufacture custom lithium battery packs. From prototype to production — small MOQ, fast iterations, extreme engineering.",
+    "cta_sim": "Talk to a Battery Engineer",
+    "cta_rfq": "Run Free Thermal Simulation",
     "tagline": "Bring Heart To Power",
-    "sub": "Free certified thermal simulation for your battery pack — small MOQ from 50 packs, fast re-design in days, built for extreme climates and high C-rate applications."
+    "already_have": "Already have the enclosure? Send us the CAD."
   },
   "stats": {
-    "cells": "Cell Configurations",
+    "cells": "Battery Configurations Built",
     "crate": "Max C-Rate",
-    "temp": "Thermal Accuracy",
-    "verified": "On-Chain Verified"
+    "temp": "Temperature Range",
+    "verified": "Min Order Quantity"
+  },
+  "problems": {
+    "title": "Your Battery Problem",
+    "sub": "That's usually where we come in.",
+    "items": [
+      { "q": "The enclosure is already designed.", "a": "We engineer the pack around it." },
+      { "q": "We only need 50–500 units.", "a": "That's exactly the kind of run we support." },
+      { "q": "The robot needs high peak current.", "a": "We select the right cells and pack architecture." },
+      { "q": "It has to operate in extreme temperatures.", "a": "We evaluate cell, pack and thermal behavior." },
+      { "q": "We're not battery engineers.", "a": "Good. You don't need to become one." }
+    ]
+  },
+  "how_we_work": {
+    "title": "From Sketch to Battery",
+    "sub": "A proven process for startups and engineering firms.",
+    "steps": [
+      { "n": "01", "title": "Tell Us What You're Building", "desc": "Send voltage, energy, peak current, dimensions, temperature range, and quantity. Or just send your CAD drawing." },
+      { "n": "02", "title": "Feasibility Review", "desc": "We review cell selection, series/parallel configuration, mechanical fit, BMS, thermal requirements, charging, and connectors." },
+      { "n": "03", "title": "Prototype Build", "desc": "We build initial packs. Fast iterations — design changes measured in days, not weeks." },
+      { "n": "04", "title": "Test & Refine", "desc": "We test under real conditions and modify the design until it meets spec." },
+      { "n": "05", "title": "Pilot Production", "desc": "Start from 50 packs. UL, CE, UN38.3 and IEC 62133 certified as standard." },
+      { "n": "06", "title": "Scale Without Switching", "desc": "Go from prototype to production without changing suppliers. Same team, same quality." }
+    ]
+  },
+  "solutions": {
+    "title": "Battery Pack Solutions",
+    "sub": "Engineered for your application, not a catalog.",
+    "items": [
+      { "name": "Robotics", "spec": "48V · High current · Compact · Custom BMS", "icon": "🤖" },
+      { "name": "AGV / AMR", "spec": "24–72V · High cycle life · Industrial enclosure", "icon": "🏭" },
+      { "name": "UAV / Drone", "spec": "High energy density · High C-rate · Lightweight", "icon": "🚁" },
+      { "name": "Medical Devices", "spec": "IEC 62133 · SMBus · Handheld · Safe chemistry", "icon": "🏥" },
+      { "name": "Electric Vehicles", "spec": "Custom voltage · High capacity · BMS with CAN Bus", "icon": "🛵" },
+      { "name": "Extreme Temperature", "spec": "-40°C to +85°C · Arctic to desert · Validated", "icon": "🌡️" }
+    ]
   },
   "simulator": {
-    "title": "Battery Thermal Simulator",
-    "sub": "Configure your pack and see thermal hotspots in real time.",
+    "title": "Estimate Your Battery's Thermal Behavior",
+    "sub": "Free preliminary simulation. Configure your pack and see thermal hotspots in real time.",
     "cell_count": "Cell Count",
     "c_rate": "Discharge Rate (C)",
     "ambient": "Ambient Temperature (°C)",
@@ -34,31 +69,41 @@
     "max_temp": "Peak Temperature",
     "avg_temp": "Average Temperature",
     "hash": "Verification ID",
-    "status": "Locally Signed — Enterprise Ledger Migration Pending"
-  },
-  "products": {
-    "title": "Product Line",
-    "sub": "Precision-engineered cells for demanding applications.",
-    "verify": "Verify on Ledger"
+    "status": "Locally Signed — Enterprise Ledger Migration Pending",
+    "cta": "Want us to validate this configuration? Send your design to an engineer →"
   },
   "contact": {
-    "title": "Request a Production Run",
-    "sub": "Tell us your pack configuration and we will respond within 24 hours.",
+    "title": "Talk to a Battery Engineer",
+    "sub": "Not sure what battery you need? That's okay. Send your requirements or CAD drawing and we'll help.",
     "name": "Full Name",
+    "company": "Company / Project Name",
     "email": "Email Address",
-    "message": "Pack Requirements",
-    "send": "Send Request"
+    "building": "What are you building?",
+    "voltage": "Voltage (V)",
+    "energy": "Energy / Capacity",
+    "current": "Peak Current (A)",
+    "temp": "Operating Temperature",
+    "quantity": "Expected Quantity",
+    "message": "Additional Requirements or Notes",
+    "unknown": "I don't know my battery specs yet",
+    "send": "Talk to an Engineer",
+    "email_direct": "Or email us directly"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "sub": "Every pack ships certified.",
+    "items": ["UL", "CE", "UN38.3", "IEC 62133"]
   },
   "footer": {
     "rights": "All rights reserved.",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "tagline": "Battery Engineering Partner for Hardware Startups & Engineering Firms"
   },
   "blog": {
-  "title": "Technical Blog",
-  "sub": "Insights from our battery engineers.",
-  "read_more": "Read More",
-  "back": "Back to Blog",
-  "published": "Published on"
+    "title": "Technical Blog",
+    "sub": "Insights from our battery engineers.",
+    "read_more": "Read More",
+    "back": "Back to Blog",
+    "published": "Published on"
   }
-  
 }
