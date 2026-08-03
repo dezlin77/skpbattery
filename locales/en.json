@@ -46,4 +46,27 @@
     "Same team from prototype to production",
     "No minimum on engineering consultation"
   ]
+},
+  "case_studies": {
+    "title": "Engineering Examples",
+    "sub": "Real projects. Real constraints. Real solutions.",
+    "badge": "Case Study",
+    "requirement": "Requirement",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "result": "Result"
+  },
+  "moq_section": {
+    "title": "Too Small for a Giant Battery Supplier?",
+    "sub": "That's where we fit.",
+    "desc": "We support custom battery projects from first prototype through scaling to production.",
+    "scale": "Prototype → 50 packs → 500 → Production",
+    "scale_sub": "Scale to production without changing your battery supplier.",
+    "features": [
+      "Engineering support from day one",
+      "Design iterations in days, not months",
+      "Same team from prototype to production",
+      "No minimum on engineering consultation"
+    ]
+  }
 }
