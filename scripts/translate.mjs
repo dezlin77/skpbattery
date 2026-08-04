@@ -1,3 +1,22 @@
+// Add this check at the top of translate.mjs
+import crypto from "crypto";
+
+const hashPath = path.join(process.cwd(), "locales/.en-hash");
+const currentHash = crypto.createHash("md5").update(enContent).digest("hex");
+
+if (fs.existsSync(hashPath)) {
+  const savedHash = fs.readFileSync(hashPath, "utf-8");
+  if (savedHash === currentHash) {
+    console.log("en.json unchanged — skipping translation.");
+    process.exit(0);
+  }
+}
+
+// ... run translations ...
+
+// Save hash at the end
+fs.writeFileSync(hashPath, currentHash);
+
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
