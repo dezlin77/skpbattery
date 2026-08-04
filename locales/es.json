@@ -2,61 +2,139 @@
   "nav": {
     "home": "Inicio",
     "products": "Productos",
+    "solutions": "Soluciones",
     "simulator": "Simulador Térmico",
-    "about": "Nosotros",
+    "blog": "Blog",
     "contact": "Contacto",
-    "blog": "Blog"
+    "for_startups": "Para Startups"
   },
   "hero": {
-    "eyebrow": "Soluciones de Baterías Industriales",
-    "headline": "Ingeniería para el Futuro de la Energía",
-    "sub": "Ejecuta una simulación térmica certificada y gratuita de tu paquete de baterías.",
-    "cta_sim": "Iniciar Simulador",
-    "cta_rfq": "Solicitar Cotización",
-    "tagline": "Llevamos Corazón a la Energía"
+    "eyebrow": "Socio de Ingeniería de Baterías",
+    "headline": "Paquetes de Baterías Personalizados para Robótica e Hardware Industrial",
+    "sub": "Desde el prototipo hasta la producción, diseñamos paquetes de baterías de litio adaptados a sus requisitos de voltaje, carcasa, corriente y condiciones ambientales.",
+    "cta_sim": "Hablar con un Ingeniero de Baterías",
+    "cta_rfq": "Ejecutar Simulación Térmica Gratuita",
+    "tagline": "Lleva Vida a la Energía",
+    "already_have": "¿Ya tienes la carcasa? Envíanos el CAD."
   },
   "stats": {
-    "cells": "Configuraciones de Celdas",
-    "crate": "Tasa C Máxima",
-    "temp": "Precisión Térmica",
-    "verified": "Verificado en Cadena"
+    "cells": "Configuraciones de Baterías Construidas",
+    "crate": "C-rate Máximo",
+    "temp": "Rango de Temperatura",
+    "verified": "Cantidad Mínima de Pedido"
+  },
+  "problems": {
+    "title": "Tu Problema con la Batería",
+    "sub": "Ahí es donde solemos entrar nosotros."
+  },
+  "how_we_work": {
+    "title": "Del Boceto a la Batería",
+    "sub": "Un proceso probado para startups y empresas de ingeniería."
+  },
+  "solutions": {
+    "title": "Soluciones de Paquetes de Baterías",
+    "sub": "Diseñadas para tu aplicación, no para un catálogo."
   },
   "simulator": {
-    "title": "Simulador Térmico de Baterías",
-    "sub": "Configura tu paquete y visualiza puntos calientes en tiempo real.",
+    "title": "Estima el Comportamiento Térmico de tu Batería",
+    "sub": "Simulación preliminar gratuita. Configura tu paquete y visualiza los puntos de calor en tiempo real.",
     "cell_count": "Número de Celdas",
     "c_rate": "Tasa de Descarga (C)",
     "ambient": "Temperatura Ambiente (°C)",
     "run": "Ejecutar Simulación",
     "running": "Simulando...",
     "download": "Descargar Informe Certificado",
-    "max_temp": "Temperatura Pico",
+    "max_temp": "Temperatura Máxima",
     "avg_temp": "Temperatura Promedio",
     "hash": "ID de Verificación",
-    "status": "Firmado Localmente — Migración a Ledger Empresarial Pendiente"
-  },
-  "products": {
-    "title": "Línea de Productos",
-    "sub": "Celdas de ingeniería de precisión para aplicaciones exigentes.",
-    "verify": "Verificar en Ledger"
+    "status": "Firmado Localmente — Migración al Registro Empresarial Pendiente",
+    "cta": "¿Quieres que validemos esta configuración? Envía tu diseño a un ingeniero →"
   },
   "contact": {
-    "title": "Solicitar una Producción",
-    "sub": "Cuéntanos tu configuración y responderemos en 24 horas.",
+    "title": "Habla con un Ingeniero de Baterías",
+    "sub": "¿No sabes qué batería necesitas? No hay problema. Envía tus requisitos o plano CAD y te ayudaremos.",
     "name": "Nombre Completo",
-    "email": "Correo Electrónico",
-    "message": "Requisitos del Paquete",
-    "send": "Enviar Solicitud"
+    "company": "Empresa / Nombre del Proyecto",
+    "email": "Dirección de Correo Electrónico",
+    "building": "¿Qué estás construyendo?",
+    "voltage": "Voltaje (V)",
+    "energy": "Energía / Capacidad",
+    "current": "Corriente Máxima (A)",
+    "temp": "Temperatura de Operación",
+    "quantity": "Cantidad Esperada",
+    "message": "Requisitos Adicionales o Notas",
+    "unknown": "Aún no conozco las especificaciones de mi batería",
+    "send": "Hablar con un Ingeniero",
+    "email_direct": "O escríbenos directamente por correo"
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "sub": "Cada paquete se envía certificado.",
+    "items": ["UL", "CE", "UN38.3", "IEC 62133"]
+  },
+  "products": {
+    "title": "Soluciones de Paquetes de Baterías",
+    "sub": "Diseñadas para tu aplicación, no para un catálogo.",
+    "verify": "Verificar en el Registro"
+  },
+  "case_studies": {
+    "title": "Ejemplos de Ingeniería",
+    "sub": "Proyectos reales. Restricciones reales. Soluciones reales.",
+    "badge": "Caso de Estudio",
+    "requirement": "Requisito",
+    "challenge": "Desafío",
+    "solution": "Solución",
+    "result": "Resultado",
+    "items": [
+      {
+        "title": "Paquete Industrial 48V / 2,5kWh",
+        "tags": ["48V", "2.5kWh", "-50°C a +50°C"],
+        "requirement": "Sistema de 48V · 2,5kWh · rango operativo de 35–55V · carcasa cilíndrica personalizada · operación de -50°C a +50°C",
+        "challenge": "Integrar la batería completa dentro de una carcasa cilíndrica utilizable de 22 pulgadas mientras se cumplen los requisitos de temperatura extrema.",
+        "solution": "Configuración personalizada de celdas + BMS + integración mecánica + análisis y validación térmica completa.",
+        "result": "Prototipo → pruebas → producción piloto. Entregado dentro de las especificaciones."
+      },
+      {
+        "title": "Paquete para Dron de Alto C-rate",
+        "tags": ["Descarga 5C", "Ligero", "UAV"],
+        "requirement": "Descarga continua de 5C · ligero · factor de forma compacto · autonomía de vuelo de 10 a 15 minutos",
+        "challenge": "Maximizar la densidad de energía mientras se gestiona la corriente máxima sin riesgo de fuga térmica.",
+        "solution": "Selección de celdas NMC + BMS personalizado con corte térmico + simulación térmica certificada a carga máxima.",
+        "result": "Se alcanzó el objetivo de autonomía de vuelo. El paquete superó la certificación de transporte UN38.3."
+      },
+      {
+        "title": "Dispositivo Médico de Mano",
+        "tags": ["IEC 62133", "SMBus", "Portátil"],
+        "requirement": "Factor de forma portátil · certificado IEC 62133 · comunicación SMBus · autonomía de 8 horas",
+        "challenge": "Cumplir con los requisitos de certificación mientras se respeta un cronograma de prototipo ajustado para ensayos clínicos.",
+        "solution": "Química LFP por seguridad + implementación completa SBS 1.1 SMBus + documentación de certificación IEC 62133.",
+        "result": "Prototipo entregado en 6 semanas. Certificación obtenida antes del plazo del ensayo clínico."
+      }
+    ]
+  },
+  "moq_section": {
+    "title": "¿Demasiado Pequeño para un Gran Proveedor de Baterías?",
+    "sub": "Ahí es donde encajamos nosotros.",
+    "desc": "Apoyamos proyectos de baterías personalizadas desde el primer prototipo hasta el escalado a producción. No necesitas ser una empresa Fortune 500 para recibir ingeniería de baterías de alto nivel.",
+    "scale": "Prototipo → 50 unidades → 500 → Producción",
+    "scale_sub": "Escala a producción sin cambiar de proveedor de baterías.",
+    "features": [
+      "Soporte de ingeniería desde el primer día",
+      "Iteraciones de diseño en días, no en meses",
+      "El mismo equipo desde el prototipo hasta la producción",
+      "Sin mínimo en consultoría de ingeniería"
+    ]
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "privacy": "Política de Privacidad"
+    "privacy": "Política de Privacidad",
+    "tagline": "Socio de Ingeniería de Baterías para Startups de Hardware y Empresas de Ingeniería"
   },
   "blog": {
-  "title": "Blog Técnico",
-  "sub": "Perspectivas de nuestros ingenieros de baterías.",
-  "read_more": "Leer más",
-  "back": "Volver al Blog",
-  "published": "Publicado el"
+    "title": "Blog Técnico",
+    "sub": "Perspectivas de nuestros ingenieros de baterías.",
+    "read_more": "Leer Más",
+    "back": "Volver al Blog",
+    "published": "Publicado el"
   }
 }

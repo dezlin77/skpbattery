@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
     "@libsql/client": "^0.17.4",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.7",

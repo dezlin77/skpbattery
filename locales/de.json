@@ -2,61 +2,139 @@
   "nav": {
     "home": "Startseite",
     "products": "Produkte",
+    "solutions": "Lösungen",
     "simulator": "Thermischer Simulator",
-    "about": "Über Uns",
+    "blog": "Blog",
     "contact": "Kontakt",
-    "blog": "Blog"
+    "for_startups": "Für Startups"
   },
   "hero": {
-    "eyebrow": "Industrielle Batterielösungen",
-    "headline": "Ingenieurskunst für die Zukunft der Energie",
-    "sub": "Führen Sie eine kostenlose zertifizierte Thermalsimulation Ihres Batteriepakets durch.",
-    "cta_sim": "Simulator Starten",
-    "cta_rfq": "Angebot Anfordern",
-    "tagline": "Herz in die Energie bringen"
+    "eyebrow": "Batterie-Entwicklungspartner",
+    "headline": "Individuelle Akkupacks für Robotik & Industriehardware",
+    "sub": "Vom Prototyp bis zur Serienproduktion entwickeln wir Lithium-Akkupacks nach Ihren Anforderungen an Spannung, Gehäuse, Strom und Umgebungsbedingungen.",
+    "cta_sim": "Mit einem Batterieingenieur sprechen",
+    "cta_rfq": "Kostenlose Thermosimulation starten",
+    "tagline": "Bring Heart To Power",
+    "already_have": "Haben Sie das Gehäuse bereits? Schicken Sie uns die CAD-Datei."
   },
   "stats": {
-    "cells": "Zellkonfigurationen",
-    "crate": "Max. C-Rate",
-    "temp": "Thermische Genauigkeit",
-    "verified": "On-Chain Verifiziert"
+    "cells": "Realisierte Batteriekonfigurationen",
+    "crate": "Maximale C-Rate",
+    "temp": "Temperaturbereich",
+    "verified": "Mindestbestellmenge"
+  },
+  "problems": {
+    "title": "Ihr Batterieproblem",
+    "sub": "Genau da kommen wir meistens ins Spiel."
+  },
+  "how_we_work": {
+    "title": "Von der Skizze zur Batterie",
+    "sub": "Ein bewährter Prozess für Startups und Ingenieurbüros."
+  },
+  "solutions": {
+    "title": "Akkupack-Lösungen",
+    "sub": "Entwickelt für Ihre Anwendung, nicht für einen Katalog."
   },
   "simulator": {
-    "title": "Batterie-Thermalsimulator",
-    "sub": "Konfigurieren Sie Ihr Paket und sehen Sie Hotspots in Echtzeit.",
-    "cell_count": "Zellanzahl",
+    "title": "Thermisches Verhalten Ihres Akkus abschätzen",
+    "sub": "Kostenlose Vorabsimulation. Konfigurieren Sie Ihren Pack und sehen Sie thermische Hotspots in Echtzeit.",
+    "cell_count": "Zellenanzahl",
     "c_rate": "Entladerate (C)",
     "ambient": "Umgebungstemperatur (°C)",
-    "run": "Simulation Starten",
-    "running": "Simuliere...",
-    "download": "Zertifizierten Bericht Herunterladen",
+    "run": "Simulation starten",
+    "running": "Simuliert...",
+    "download": "Zertifizierten Bericht herunterladen",
     "max_temp": "Spitzentemperatur",
     "avg_temp": "Durchschnittstemperatur",
-    "hash": "Verifikations-ID",
-    "status": "Lokal Signiert — Enterprise-Ledger-Migration Ausstehend"
-  },
-  "products": {
-    "title": "Produktlinie",
-    "sub": "Präzisionsgefertigte Zellen für anspruchsvolle Anwendungen.",
-    "verify": "Im Ledger Verifizieren"
+    "hash": "Verifizierungs-ID",
+    "status": "Lokal signiert — Enterprise-Ledger-Migration ausstehend",
+    "cta": "Möchten Sie, dass wir diese Konfiguration validieren? Senden Sie Ihr Design an einen Ingenieur →"
   },
   "contact": {
-    "title": "Produktionslauf Anfordern",
-    "sub": "Teilen Sie uns Ihre Paketkonfiguration mit und wir antworten innerhalb von 24 Stunden.",
+    "title": "Mit einem Batterieingenieur sprechen",
+    "sub": "Nicht sicher, welchen Akku Sie benötigen? Kein Problem. Senden Sie Ihre Anforderungen oder CAD-Zeichnung und wir helfen Ihnen.",
     "name": "Vollständiger Name",
+    "company": "Unternehmen / Projektname",
     "email": "E-Mail-Adresse",
-    "message": "Paketanforderungen",
-    "send": "Anfrage Senden"
+    "building": "Was entwickeln Sie?",
+    "voltage": "Spannung (V)",
+    "energy": "Energie / Kapazität",
+    "current": "Spitzenstrom (A)",
+    "temp": "Betriebstemperatur",
+    "quantity": "Erwartete Stückzahl",
+    "message": "Weitere Anforderungen oder Hinweise",
+    "unknown": "Ich kenne meine Akkuspezifikationen noch nicht",
+    "send": "Mit einem Ingenieur sprechen",
+    "email_direct": "Oder schreiben Sie uns direkt eine E-Mail"
+  },
+  "certifications": {
+    "title": "Zertifizierungen",
+    "sub": "Jeder Pack wird zertifiziert geliefert.",
+    "items": ["UL", "CE", "UN38.3", "IEC 62133"]
+  },
+  "products": {
+    "title": "Akkupack-Lösungen",
+    "sub": "Entwickelt für Ihre Anwendung, nicht für einen Katalog.",
+    "verify": "Im Ledger verifizieren"
+  },
+  "case_studies": {
+    "title": "Ingenieursbeispiele",
+    "sub": "Echte Projekte. Echte Anforderungen. Echte Lösungen.",
+    "badge": "Fallstudie",
+    "requirement": "Anforderung",
+    "challenge": "Herausforderung",
+    "solution": "Lösung",
+    "result": "Ergebnis",
+    "items": [
+      {
+        "title": "48V / 2,5 kWh Industriepack",
+        "tags": ["48V", "2,5 kWh", "-50°C bis +50°C"],
+        "requirement": "48V-System · 2,5 kWh · Betriebsbereich 35–55V · individuelles zylindrisches Gehäuse · Betrieb von -50°C bis +50°C",
+        "challenge": "Die gesamte Batterie in ein nutzbares zylindrisches Gehäuse von 22 Zoll integrieren und dabei extreme Temperaturanforderungen erfüllen.",
+        "solution": "Individuelle Zellkonfiguration + BMS + mechanische Integration + vollständige Thermoanalyse und Validierung.",
+        "result": "Prototyp → Tests → Pilotproduktion. Innerhalb der Spezifikationen geliefert."
+      },
+      {
+        "title": "Hochstrom-Drohnenpack",
+        "tags": ["5C Entladung", "Leichtgewicht", "UAV"],
+        "requirement": "5C Dauerentladung · leichtes Gewicht · kompakter Formfaktor · 10–15 Minuten Flugdauer",
+        "challenge": "Maximierung der Energiedichte bei gleichzeitiger Bewältigung von Spitzenströmen ohne das Risiko eines thermischen Durchgehens.",
+        "solution": "NMC-Zellauswahl + individuelles BMS mit thermischer Abschaltung + zertifizierte Thermosimulation bei Spitzenlast.",
+        "result": "Flugdauerziel erreicht. Pack bestand die UN38.3-Transportzertifizierung."
+      },
+      {
+        "title": "Medizinisches Handgerät",
+        "tags": ["IEC 62133", "SMBus", "Handgerät"],
+        "requirement": "Handgerät-Formfaktor · IEC 62133-zertifiziert · SMBus-Kommunikation · 8 Stunden Laufzeit",
+        "challenge": "Zertifizierungsanforderungen erfüllen und gleichzeitig einen anspruchsvollen Prototyp-Zeitplan für klinische Studien einhalten.",
+        "solution": "LFP-Chemie für Sicherheit + vollständige SBS 1.1 SMBus-Implementierung + IEC 62133-Zertifizierungsdokumentation.",
+        "result": "Prototyp in 6 Wochen geliefert. Zertifizierung vor dem Deadline der klinischen Studie erreicht."
+      }
+    ]
+  },
+  "moq_section": {
+    "title": "Zu klein für einen großen Batteriezulieferer?",
+    "sub": "Genau da passen wir rein.",
+    "desc": "Wir unterstützen individuelle Batterieprojekte vom ersten Prototyp bis zur Skalierung in die Serienproduktion. Sie müssen kein Fortune-500-Unternehmen sein, um professionelle Batterieentwicklung zu erhalten.",
+    "scale": "Prototyp → 50 Packs → 500 → Serienproduktion",
+    "scale_sub": "Skalieren Sie zur Serienproduktion, ohne Ihren Batterielieferanten wechseln zu müssen.",
+    "features": [
+      "Ingenieurunterstützung vom ersten Tag an",
+      "Designiterationen in Tagen, nicht Monaten",
+      "Dasselbe Team vom Prototyp bis zur Serienproduktion",
+      "Kein Minimum für Ingenieursberatung"
+    ]
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
-    "privacy": "Datenschutzrichtlinie"
+    "privacy": "Datenschutzrichtlinie",
+    "tagline": "Batterie-Entwicklungspartner für Hardware-Startups & Ingenieurbüros"
   },
   "blog": {
-  "title": "Technischer Blog",
-  "sub": "Einblicke von unseren Batterieingenieuren.",
-  "read_more": "Mehr lesen",
-  "back": "Zurück zum Blog",
-  "published": "Veröffentlicht am"
+    "title": "Technischer Blog",
+    "sub": "Einblicke von unseren Batterieingenieuren.",
+    "read_more": "Weiterlesen",
+    "back": "Zurück zum Blog",
+    "published": "Veröffentlicht am"
   }
 }
