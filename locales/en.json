@@ -1,52 +1,82 @@
-,
-"case_studies": {
-  "title": "Engineering Examples",
-  "sub": "Real projects. Real constraints. Real solutions.",
-  "badge": "Case Study",
-  "requirement": "Requirement",
-  "challenge": "Challenge",
-  "solution": "Solution",
-  "result": "Result",
-  "items": [
-    {
-      "title": "48V / 2.5kWh Industrial Pack",
-      "tags": ["48V", "2.5kWh", "-50°C to +50°C"],
-      "requirement": "48V system · 2.5kWh · 35–55V operating range · custom cylindrical enclosure · -50°C to +50°C operation",
-      "challenge": "Fit the entire battery inside a 22-inch usable cylindrical enclosure while meeting extreme temperature requirements.",
-      "solution": "Custom cell configuration + BMS + mechanical integration + full thermal analysis and validation.",
-      "result": "Prototype → testing → pilot production. Delivered within spec."
-    },
-    {
-      "title": "High C-Rate Drone Pack",
-      "tags": ["5C discharge", "Lightweight", "UAV"],
-      "requirement": "5C continuous discharge · lightweight · compact form factor · 10–15 minute flight endurance",
-      "challenge": "Maximize energy density while handling peak current draw without thermal runaway risk.",
-      "solution": "NMC cell selection + custom BMS with thermal cutoff + certified thermal simulation at peak load.",
-      "result": "Met flight endurance target. Pack passed UN38.3 transport certification."
-    },
-    {
-      "title": "Medical Handheld Device",
-      "tags": ["IEC 62133", "SMBus", "Handheld"],
-      "requirement": "Handheld form factor · IEC 62133 certified · SMBus communication · 8-hour runtime",
-      "challenge": "Navigate certification requirements while hitting an aggressive prototype timeline for clinical trials.",
-      "solution": "LFP chemistry for safety + full SBS 1.1 SMBus implementation + IEC 62133 certification documentation.",
-      "result": "Prototype delivered in 6 weeks. Certification achieved before clinical trial deadline."
-    }
-  ]
-},
-"moq_section": {
-  "title": "Too Small for a Giant Battery Supplier?",
-  "sub": "That's where we fit.",
-  "desc": "We support custom battery projects from first prototype through scaling to production. You don't need to be a Fortune 500 company to get serious battery engineering.",
-  "scale": "Prototype → 50 packs → 500 → Production",
-  "scale_sub": "Scale to production without changing your battery supplier.",
-  "features": [
-    "Engineering support from day one",
-    "Design iterations in days, not months",
-    "Same team from prototype to production",
-    "No minimum on engineering consultation"
-  ]
-},
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "solutions": "Solutions",
+    "simulator": "Thermal Simulator",
+    "blog": "Blog",
+    "contact": "Contact",
+    "for_startups": "For Startups"
+  },
+  "hero": {
+    "eyebrow": "Battery Engineering Partner",
+    "headline": "Custom Battery Packs for Robotics & Industrial Hardware",
+    "sub": "From prototype to production, we engineer lithium battery packs around your voltage, enclosure, current and environmental requirements.",
+    "cta_sim": "Talk to a Battery Engineer",
+    "cta_rfq": "Run Free Thermal Simulation",
+    "tagline": "Bring Heart To Power",
+    "already_have": "Already have the enclosure? Send us the CAD."
+  },
+  "stats": {
+    "cells": "Battery Configurations Built",
+    "crate": "Max C-Rate",
+    "temp": "Temperature Range",
+    "verified": "Min Order Quantity"
+  },
+  "problems": {
+    "title": "Your Battery Problem",
+    "sub": "That's usually where we come in."
+  },
+  "how_we_work": {
+    "title": "From Sketch to Battery",
+    "sub": "A proven process for startups and engineering firms."
+  },
+  "solutions": {
+    "title": "Battery Pack Solutions",
+    "sub": "Engineered for your application, not a catalog."
+  },
+  "simulator": {
+    "title": "Estimate Your Battery's Thermal Behavior",
+    "sub": "Free preliminary simulation. Configure your pack and see thermal hotspots in real time.",
+    "cell_count": "Cell Count",
+    "c_rate": "Discharge Rate (C)",
+    "ambient": "Ambient Temperature (°C)",
+    "run": "Run Simulation",
+    "running": "Simulating...",
+    "download": "Download Certified Report",
+    "max_temp": "Peak Temperature",
+    "avg_temp": "Average Temperature",
+    "hash": "Verification ID",
+    "status": "Locally Signed — Enterprise Ledger Migration Pending",
+    "cta": "Want us to validate this configuration? Send your design to an engineer →"
+  },
+  "contact": {
+    "title": "Talk to a Battery Engineer",
+    "sub": "Not sure what battery you need? That's okay. Send your requirements or CAD drawing and we'll help.",
+    "name": "Full Name",
+    "company": "Company / Project Name",
+    "email": "Email Address",
+    "building": "What are you building?",
+    "voltage": "Voltage (V)",
+    "energy": "Energy / Capacity",
+    "current": "Peak Current (A)",
+    "temp": "Operating Temperature",
+    "quantity": "Expected Quantity",
+    "message": "Additional Requirements or Notes",
+    "unknown": "I don't know my battery specs yet",
+    "send": "Talk to an Engineer",
+    "email_direct": "Or email us directly"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "sub": "Every pack ships certified.",
+    "items": ["UL", "CE", "UN38.3", "IEC 62133"]
+  },
+  "products": {
+    "title": "Battery Pack Solutions",
+    "sub": "Engineered for your application, not a catalog.",
+    "verify": "Verify on Ledger"
+  },
   "case_studies": {
     "title": "Engineering Examples",
     "sub": "Real projects. Real constraints. Real solutions.",
@@ -54,12 +84,38 @@
     "requirement": "Requirement",
     "challenge": "Challenge",
     "solution": "Solution",
-    "result": "Result"
+    "result": "Result",
+    "items": [
+      {
+        "title": "48V / 2.5kWh Industrial Pack",
+        "tags": ["48V", "2.5kWh", "-50°C to +50°C"],
+        "requirement": "48V system · 2.5kWh · 35–55V operating range · custom cylindrical enclosure · -50°C to +50°C operation",
+        "challenge": "Fit the entire battery inside a 22-inch usable cylindrical enclosure while meeting extreme temperature requirements.",
+        "solution": "Custom cell configuration + BMS + mechanical integration + full thermal analysis and validation.",
+        "result": "Prototype → testing → pilot production. Delivered within spec."
+      },
+      {
+        "title": "High C-Rate Drone Pack",
+        "tags": ["5C discharge", "Lightweight", "UAV"],
+        "requirement": "5C continuous discharge · lightweight · compact form factor · 10–15 minute flight endurance",
+        "challenge": "Maximize energy density while handling peak current draw without thermal runaway risk.",
+        "solution": "NMC cell selection + custom BMS with thermal cutoff + certified thermal simulation at peak load.",
+        "result": "Met flight endurance target. Pack passed UN38.3 transport certification."
+      },
+      {
+        "title": "Medical Handheld Device",
+        "tags": ["IEC 62133", "SMBus", "Handheld"],
+        "requirement": "Handheld form factor · IEC 62133 certified · SMBus communication · 8-hour runtime",
+        "challenge": "Navigate certification requirements while hitting an aggressive prototype timeline for clinical trials.",
+        "solution": "LFP chemistry for safety + full SBS 1.1 SMBus implementation + IEC 62133 certification documentation.",
+        "result": "Prototype delivered in 6 weeks. Certification achieved before clinical trial deadline."
+      }
+    ]
   },
   "moq_section": {
     "title": "Too Small for a Giant Battery Supplier?",
     "sub": "That's where we fit.",
-    "desc": "We support custom battery projects from first prototype through scaling to production.",
+    "desc": "We support custom battery projects from first prototype through scaling to production. You don't need to be a Fortune 500 company to get serious battery engineering.",
     "scale": "Prototype → 50 packs → 500 → Production",
     "scale_sub": "Scale to production without changing your battery supplier.",
     "features": [
@@ -68,5 +124,17 @@
       "Same team from prototype to production",
       "No minimum on engineering consultation"
     ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "tagline": "Battery Engineering Partner for Hardware Startups & Engineering Firms"
+  },
+  "blog": {
+    "title": "Technical Blog",
+    "sub": "Insights from our battery engineers.",
+    "read_more": "Read More",
+    "back": "Back to Blog",
+    "published": "Published on"
   }
 }
