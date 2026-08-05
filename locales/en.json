@@ -24,12 +24,45 @@
     "verified": "Min Order Quantity"
   },
   "problems": {
-    "title": "Your Battery Problem",
-    "sub": "That's usually where we come in."
+  "title": "Your Battery Problem",
+  "sub": "That's usually where we come in.",
+  "q1": "The enclosure is already designed.",
+  "a1": "We engineer the pack around it.",
+  "q2": "We only need 50–500 units.",
+  "a2": "That's exactly the kind of run we support.",
+  "q3": "The robot needs high peak current.",
+  "a3": "We select the right cells and pack architecture.",
+  "q4": "It has to operate in extreme temperatures.",
+  "a4": "We evaluate cell, pack and thermal behavior down to -40°C.",
+  "q5": "We're not battery engineers.",
+  "a5": "Good. You don't need to become one."
+  },
+  "why": {
+  "headline": "Built for Engineers Who Can't Afford to Wait",
+  "moq_title": "Small MOQ",
+  "moq_desc": "From 50 packs for development builds. Scale to production without changing suppliers.",
+  "fast_title": "Fast Re-Design",
+  "fast_desc": "Design iterations in days. Our engineers turn feedback into updated specs fast.",
+  "env_title": "Built for Difficult Environments",
+  "env_desc": "Extreme temperatures (-40°C to +85°C), vibration, high C-rate, constrained enclosures. Validated, not estimated.",
+  "crate_title": "High C-Rate",
+  "crate_desc": "Up to 5C continuous discharge. Engineered for robotics, UAVs, and high-draw devices.",
+  "thermal_title": "Thermal Expertise",
+  "thermal_desc": "In-house thermal simulation and validation. Every pack ships with a certified thermal profile.",
+  "cert_title": "Certified",
+  "cert_desc": "UL, CE, UN38.3, IEC 62133 certified as standard. Full documentation for your compliance team."
   },
   "how_we_work": {
-    "title": "From Sketch to Battery",
-    "sub": "A proven process for startups and engineering firms."
+  "title": "From Sketch to Battery",
+  "sub": "A proven process for startups and engineering firms.",
+  "steps": [
+    { "n": "01", "title": "Tell Us What You're Building", "desc": "Send voltage, energy, peak current, dimensions, temperature range, and quantity. Or just send your CAD drawing." },
+    { "n": "02", "title": "Feasibility Review", "desc": "We review cell selection, series/parallel configuration, mechanical fit, BMS, thermal requirements, charging, and connectors." },
+    { "n": "03", "title": "Prototype Build", "desc": "We build initial packs. Fast iterations — design changes measured in days, not weeks." },
+    { "n": "04", "title": "Test & Refine", "desc": "We test under real conditions and modify the design until it meets spec." },
+    { "n": "05", "title": "Pilot Production", "desc": "Start from 50 packs. UL, CE, UN38.3 and IEC 62133 certified as standard. ~10 week lead time." },
+    { "n": "06", "title": "Scale Without Switching", "desc": "Go from prototype to production without changing suppliers. Same team, same quality, same relationship." }
+  ]
   },
   "solutions": {
     "title": "Battery Pack Solutions",

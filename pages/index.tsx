@@ -61,6 +61,66 @@ export default function Home({ t }: { t: any }) {
     width: "100%",
   };
 
+  const problems = [
+    { q: t.problems?.q1 || "The enclosure is already designed.", a: t.problems?.a1 || "We engineer the pack around it." },
+    { q: t.problems?.q2 || "We only need 50–500 units.", a: t.problems?.a2 || "That's exactly the kind of run we support." },
+    { q: t.problems?.q3 || "The robot needs high peak current.", a: t.problems?.a3 || "We select the right cells and pack architecture." },
+    { q: t.problems?.q4 || "It has to operate in extreme temperatures.", a: t.problems?.a4 || "We evaluate cell, pack and thermal behavior down to -40°C." },
+    { q: t.problems?.q5 || "We're not battery engineers.", a: t.problems?.a5 || "Good. You don't need to become one." },
+  ];
+
+  const whyItems = [
+    { icon: "📦", title: t.why?.moq_title || "Small MOQ", desc: t.why?.moq_desc || "From 50 packs for development builds. Scale to production without changing suppliers." },
+    { icon: "⚡", title: t.why?.fast_title || "Fast Re-Design", desc: t.why?.fast_desc || "Design iterations in days. Our engineers turn feedback into updated specs fast." },
+    { icon: "🌡️", title: t.why?.env_title || "Built for Difficult Environments", desc: t.why?.env_desc || "Extreme temperatures (-40°C to +85°C), vibration, high C-rate, constrained enclosures. Validated, not estimated." },
+    { icon: "🔋", title: t.why?.crate_title || "High C-Rate", desc: t.why?.crate_desc || "Up to 5C continuous discharge. Engineered for robotics, UAVs, and high-draw devices." },
+    { icon: "🔬", title: t.why?.thermal_title || "Thermal Expertise", desc: t.why?.thermal_desc || "In-house thermal simulation and validation. Every pack ships with a certified thermal profile." },
+    { icon: "📋", title: t.why?.cert_title || "Certified", desc: t.why?.cert_desc || "UL, CE, UN38.3, IEC 62133 certified as standard. Full documentation for your compliance team." },
+  ];
+
+  const moqFeatures = t.moq_section?.features || [
+    "Engineering support from day one",
+    "Design iterations in days, not months",
+    "Same team from prototype to production",
+    "No minimum on engineering consultation",
+  ];
+
+  const caseStudies = t.case_studies?.items || [
+    {
+      title: "48V / 2.5kWh Industrial Pack",
+      tags: ["48V", "2.5kWh", "-50°C to +50°C"],
+      requirement: "48V · 2.5kWh · 35–55V operating range · custom cylindrical enclosure · extreme temperature",
+      challenge: "Fit the entire battery inside a 22-inch usable cylindrical enclosure while meeting extreme temperature requirements.",
+      solution: "Custom cell configuration + BMS + mechanical integration + full thermal analysis.",
+      result: "Prototype → testing → pilot production. Delivered within spec.",
+    },
+    {
+      title: "High C-Rate Drone Pack",
+      tags: ["5C discharge", "Lightweight", "UAV"],
+      requirement: "5C continuous discharge · lightweight · compact · 10–15 min flight endurance",
+      challenge: "Maximize energy density while handling peak current without thermal runaway risk.",
+      solution: "NMC cell selection + custom BMS with thermal cutoff + certified thermal simulation at peak load.",
+      result: "Met flight endurance target. Passed UN38.3 transport certification.",
+    },
+    {
+      title: "Medical Handheld Device",
+      tags: ["IEC 62133", "SMBus", "Handheld"],
+      requirement: "Handheld form factor · IEC 62133 · SMBus communication · 8-hour runtime",
+      challenge: "Navigate certification while hitting an aggressive prototype timeline for clinical trials.",
+      solution: "LFP chemistry for safety + full SBS 1.1 SMBus implementation + IEC 62133 certification.",
+      result: "Prototype in 6 weeks. Certification achieved before clinical trial deadline.",
+    },
+  ];
+
+  const howSteps = t.how_we_work?.steps || [
+    { n: "01", title: "Tell Us What You're Building", desc: "Send voltage, energy, peak current, dimensions, temperature range, and quantity. Or just send your CAD drawing." },
+    { n: "02", title: "Feasibility Review", desc: "We review cell selection, series/parallel configuration, mechanical fit, BMS, thermal requirements, charging, and connectors." },
+    { n: "03", title: "Prototype Build", desc: "We build initial packs. Fast iterations — design changes measured in days, not weeks." },
+    { n: "04", title: "Test & Refine", desc: "We test under real conditions and modify the design until it meets spec." },
+    { n: "05", title: "Pilot Production", desc: "Start from 50 packs. UL, CE, UN38.3 and IEC 62133 certified as standard. ~10 week lead time." },
+    { n: "06", title: "Scale Without Switching", desc: "Go from prototype to production without changing suppliers. Same team, same quality, same relationship." },
+  ];
+
   return (
     <>
       <head>
@@ -81,16 +141,15 @@ export default function Home({ t }: { t: any }) {
             <p style={{ color: "var(--sky-red)", fontWeight: 600,
               letterSpacing: "0.1em", textTransform: "uppercase",
               fontSize: "0.8rem", marginBottom: "1rem" }}>
-              Battery Engineering Partner
+              {t.hero?.eyebrow}
             </p>
             <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.8rem)",
               marginBottom: "1.25rem", color: "var(--sky-text)", lineHeight: 1.12 }}>
-              Custom Battery Packs for Robotics & Industrial Equipment
+              {t.hero?.headline}
             </h1>
             <p style={{ color: "var(--sky-gray)", fontSize: "1.1rem",
               maxWidth: "540px", marginBottom: "1rem", lineHeight: 1.75 }}>
-              From prototype to production, we engineer lithium battery packs around
-              your voltage, enclosure, current and environmental requirements.
+              {t.hero?.sub}
             </p>
             <p style={{ color: "var(--sky-muted)", fontSize: "0.88rem",
               marginBottom: "2rem" }}>
@@ -98,21 +157,21 @@ export default function Home({ t }: { t: any }) {
             </p>
             <p style={{ color: "var(--sky-muted)", fontSize: "0.88rem",
               fontStyle: "italic", marginBottom: "2.5rem" }}>
-              Already have the enclosure? Send us the CAD.
+              {t.hero?.already_have}
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link href="#contact"
                 style={{ background: "var(--sky-red)", color: "white",
                   padding: "0.9rem 2rem", borderRadius: "8px",
                   fontWeight: 700, fontSize: "1rem" }}>
-                Talk to a Battery Engineer →
+                {t.hero?.cta_sim} →
               </Link>
               <Link href="#simulator"
                 style={{ background: "transparent", color: "var(--sky-text)",
                   padding: "0.9rem 2rem", borderRadius: "8px",
                   fontWeight: 600, fontSize: "1rem",
                   border: "1px solid #CBD5E1" }}>
-                Free Thermal Simulation
+                {t.hero?.cta_rfq}
               </Link>
             </div>
           </div>
@@ -132,7 +191,7 @@ export default function Home({ t }: { t: any }) {
                 Sky Power (US)
               </p>
               <p style={{ color: "white", fontWeight: 600, fontSize: "0.95rem" }}>
-                Bring Heart To Power
+                {t.hero?.tagline}
               </p>
             </div>
           </div>
@@ -149,22 +208,16 @@ export default function Home({ t }: { t: any }) {
             <p style={{ color: "var(--sky-red)", fontWeight: 600,
               letterSpacing: "0.1em", textTransform: "uppercase",
               fontSize: "0.8rem", marginBottom: "0.5rem" }}>
-              Your Battery Problem
+              {t.problems?.title}
             </p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)",
               marginBottom: "3rem" }}>
-              That's usually where we come in.
+              {t.problems?.sub}
             </h2>
             <div style={{ display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
               gap: "1.25rem" }}>
-              {[
-                { q: "The enclosure is already designed.", a: "We engineer the pack around it." },
-                { q: "We only need 50–500 units.", a: "That's exactly the kind of run we support." },
-                { q: "The robot needs high peak current.", a: "We select the right cells and pack architecture." },
-                { q: "It has to operate in extreme temperatures.", a: "We evaluate cell, pack and thermal behavior down to -40°C." },
-                { q: "We're not battery engineers.", a: "Good. You don't need to become one." },
-              ].map(({ q, a }) => (
+              {problems.map(({ q, a }) => (
                 <div key={q}
                   style={{ padding: "1.5rem", border: "1px solid var(--sky-border)",
                     borderRadius: "12px", background: "white",
@@ -197,25 +250,12 @@ export default function Home({ t }: { t: any }) {
           </p>
           <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
             marginBottom: "3rem", maxWidth: "600px" }}>
-            Built for Engineers Who Can't Afford to Wait
+            {t.why?.headline || "Built for Engineers Who Can't Afford to Wait"}
           </h2>
           <div style={{ display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
             gap: "1.5rem" }}>
-            {[
-              { icon: "📦", title: "Small MOQ",
-                desc: "From 50 packs for development builds. Scale to production without changing suppliers." },
-              { icon: "⚡", title: "Fast Re-Design",
-                desc: "Design iterations in days. Our engineers turn feedback into updated specs fast." },
-              { icon: "🌡️", title: "Built for Difficult Environments",
-                desc: "Extreme temperatures (-40°C to +85°C), vibration, high C-rate, constrained enclosures. Validated, not estimated." },
-              { icon: "🔋", title: "High C-Rate",
-                desc: "Up to 5C continuous discharge. Engineered for robotics, UAVs, and high-draw devices." },
-              { icon: "🔬", title: "Thermal Expertise",
-                desc: "In-house thermal simulation and validation. Every pack ships with a certified thermal profile." },
-              { icon: "📋", title: "Certified",
-                desc: "UL, CE, UN38.3, IEC 62133 certified as standard. Full documentation for your compliance team." },
-            ].map(({ icon, title, desc }) => (
+            {whyItems.map(({ icon, title, desc }) => (
               <div key={title}
                 style={{ padding: "1.5rem", border: "1px solid var(--sky-border)",
                   borderRadius: "12px", background: "white",
@@ -239,41 +279,31 @@ export default function Home({ t }: { t: any }) {
         </section>
 
         {/* ── SMALL MOQ CALLOUT ── */}
-        <section style={{
-          background: "var(--sky-red)", padding: "5rem 2rem",
-          color: "white",
-        }}>
+        <section style={{ background: "var(--sky-red)", padding: "5rem 2rem", color: "white" }}>
           <div style={{ maxWidth: "900px", margin: "0 auto",
             display: "grid", gridTemplateColumns: "1fr 1fr",
-            gap: "4rem", alignItems: "center", flexWrap: "wrap" }}
+            gap: "4rem", alignItems: "center" }}
             className="moq-grid">
             <div>
               <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                 marginBottom: "1rem", color: "white" }}>
-                Too Small for a Giant Battery Supplier?
+                {t.moq_section?.title}
               </h2>
               <p style={{ fontSize: "1.1rem", opacity: 0.9,
                 lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                That's where we fit. We support custom battery projects from
-                first prototype through scaling to production.
+                {t.moq_section?.sub} {t.moq_section?.desc}
               </p>
               <p style={{ fontSize: "1.15rem", fontWeight: 800,
-                marginBottom: "0.5rem", letterSpacing: "-0.01em" }}>
-                Prototype → 50 packs → 500 → Production
+                marginBottom: "0.5rem" }}>
+                {t.moq_section?.scale}
               </p>
               <p style={{ opacity: 0.85, fontSize: "0.9rem" }}>
-                Scale to production without changing your battery supplier.
+                {t.moq_section?.scale_sub}
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
-              {[
-                "Engineering support from day one",
-                "Design iterations in days, not months",
-                "Same team from prototype to production",
-                "No minimum on engineering consultation",
-              ].map((f) => (
-                <div key={f} style={{ display: "flex", alignItems: "center",
-                  gap: "0.75rem" }}>
+              {moqFeatures.map((f: string) => (
+                <div key={f} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                   <span style={{ width: "20px", height: "20px", borderRadius: "50%",
                     background: "rgba(255,255,255,0.2)", display: "flex",
                     alignItems: "center", justifyContent: "center",
@@ -287,7 +317,7 @@ export default function Home({ t }: { t: any }) {
                   borderRadius: "8px", fontWeight: 700,
                   fontSize: "0.95rem", display: "inline-block",
                   textAlign: "center" }}>
-                Talk to a Battery Engineer →
+                {t.contact?.send} →
               </Link>
             </div>
           </div>
@@ -303,85 +333,53 @@ export default function Home({ t }: { t: any }) {
           <p style={{ color: "var(--sky-red)", fontWeight: 600,
             letterSpacing: "0.1em", textTransform: "uppercase",
             fontSize: "0.8rem", marginBottom: "0.5rem" }}>
-            Engineering Examples
+            {t.case_studies?.title}
           </p>
-          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-            marginBottom: "0.75rem" }}>
-            Real Projects. Real Constraints. Real Solutions.
+          <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)", marginBottom: "0.75rem" }}>
+            {t.case_studies?.sub}
           </h2>
-          <p style={{ color: "var(--sky-gray)", marginBottom: "3rem",
-            maxWidth: "500px" }}>
+          <p style={{ color: "var(--sky-gray)", marginBottom: "3rem", maxWidth: "500px" }}>
             Projects shown anonymously. Details available on request.
           </p>
           <div style={{ display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: "1.5rem" }}>
-            {[
-              {
-                title: "48V / 2.5kWh Industrial Pack",
-                tags: ["48V", "2.5kWh", "-50°C to +50°C"],
-                requirement: "48V · 2.5kWh · 35–55V operating range · custom cylindrical enclosure · extreme temperature",
-                challenge: "Fit the entire battery inside a 22-inch usable cylindrical enclosure while meeting extreme temperature requirements.",
-                solution: "Custom cell configuration + BMS + mechanical integration + full thermal analysis.",
-                result: "Prototype → testing → pilot production. Delivered within spec.",
-              },
-              {
-                title: "High C-Rate Drone Pack",
-                tags: ["5C discharge", "Lightweight", "UAV"],
-                requirement: "5C continuous discharge · lightweight · compact · 10–15 min flight endurance",
-                challenge: "Maximize energy density while handling peak current without thermal runaway risk.",
-                solution: "NMC cell selection + custom BMS with thermal cutoff + certified thermal simulation at peak load.",
-                result: "Met flight endurance target. Passed UN38.3 transport certification.",
-              },
-              {
-                title: "Medical Handheld Device",
-                tags: ["IEC 62133", "SMBus", "Handheld"],
-                requirement: "Handheld form factor · IEC 62133 · SMBus communication · 8-hour runtime",
-                challenge: "Navigate certification while hitting an aggressive prototype timeline for clinical trials.",
-                solution: "LFP chemistry for safety + full SBS 1.1 SMBus implementation + IEC 62133 certification.",
-                result: "Prototype in 6 weeks. Certification achieved before clinical trial deadline.",
-              },
-            ].map((cs) => (
+            {caseStudies.map((cs: any) => (
               <div key={cs.title}
                 style={{ border: "1px solid var(--sky-border)", borderRadius: "12px",
-                  overflow: "hidden", background: "white",
-                  transition: "box-shadow 0.2s" }}
+                  overflow: "hidden", background: "white", transition: "box-shadow 0.2s" }}
                 onMouseEnter={e => e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.08)"}
                 onMouseLeave={e => e.currentTarget.style.boxShadow = "none"}>
-                {/* Card header */}
                 <div style={{ background: "var(--sky-navy-light)",
                   padding: "1.25rem 1.5rem",
                   borderBottom: "1px solid var(--sky-border)" }}>
                   <p style={{ color: "var(--sky-red)", fontSize: "0.7rem",
                     fontWeight: 700, letterSpacing: "0.1em",
                     textTransform: "uppercase", marginBottom: "0.4rem" }}>
-                    Case Study
+                    {t.case_studies?.badge}
                   </p>
                   <h3 style={{ fontSize: "1.05rem", fontWeight: 700,
                     color: "var(--sky-text)", marginBottom: "0.75rem" }}>
                     {cs.title}
                   </h3>
                   <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-                    {cs.tags.map((tag) => (
+                    {cs.tags.map((tag: string) => (
                       <span key={tag}
-                        style={{ background: "white",
-                          border: "1px solid var(--sky-border)",
+                        style={{ background: "white", border: "1px solid var(--sky-border)",
                           color: "var(--sky-gray)", padding: "0.2rem 0.6rem",
-                          borderRadius: "4px", fontSize: "0.72rem",
-                          fontWeight: 600 }}>
+                          borderRadius: "4px", fontSize: "0.72rem", fontWeight: 600 }}>
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
-                {/* Card body */}
-                <div style={{ padding: "1.5rem",
-                  display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ padding: "1.5rem", display: "flex",
+                  flexDirection: "column", gap: "1rem" }}>
                   {[
-                    { label: "Requirement", value: cs.requirement },
-                    { label: "Challenge", value: cs.challenge },
-                    { label: "Solution", value: cs.solution },
-                    { label: "Result", value: cs.result },
+                    { label: t.case_studies?.requirement, value: cs.requirement },
+                    { label: t.case_studies?.challenge, value: cs.challenge },
+                    { label: t.case_studies?.solution, value: cs.solution },
+                    { label: t.case_studies?.result, value: cs.result },
                   ].map(({ label, value }) => (
                     <div key={label}>
                       <p style={{ fontSize: "0.7rem", fontWeight: 700,
@@ -410,44 +408,33 @@ export default function Home({ t }: { t: any }) {
               How We Work
             </p>
             <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-              marginBottom: "0.75rem" }}>From Sketch to Battery</h2>
-            <p style={{ color: "var(--sky-gray)", marginBottom: "3rem",
-              maxWidth: "500px" }}>
-              A proven process for startups and engineering firms.
+              marginBottom: "0.75rem" }}>
+              {t.how_we_work?.title}
+            </h2>
+            <p style={{ color: "var(--sky-gray)", marginBottom: "3rem", maxWidth: "500px" }}>
+              {t.how_we_work?.sub}
             </p>
             <div style={{ display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
               gap: "2rem" }}>
-              {[
-                { n: "01", title: "Tell Us What You're Building",
-                  desc: "Send voltage, energy, peak current, dimensions, temperature range, and quantity. Or just send your CAD drawing. Don't know your specs yet? That's fine too." },
-                { n: "02", title: "Feasibility Review",
-                  desc: "We review cell selection, series/parallel configuration, mechanical fit, BMS, thermal requirements, charging, and connectors." },
-                { n: "03", title: "Prototype Build",
-                  desc: "We build initial packs. Fast iterations — design changes measured in days, not weeks." },
-                { n: "04", title: "Test & Refine",
-                  desc: "We test under real conditions and modify the design until it meets spec." },
-                { n: "05", title: "Pilot Production",
-                  desc: "Start from 50 packs. UL, CE, UN38.3 and IEC 62133 certified as standard. ~10 week lead time." },
-                { n: "06", title: "Scale Without Switching",
-                  desc: "Go from prototype to production without changing suppliers. Same team, same quality, same relationship." },
-              ].map(({ n, title, desc }) => (
-                <div key={n} style={{ display: "flex", gap: "1rem" }}>
+              {howSteps.map((step: any) => (
+                <div key={step.n || step.title}
+                  style={{ display: "flex", gap: "1rem" }}>
                   <div style={{ flexShrink: 0, paddingTop: "2px" }}>
                     <span style={{ fontFamily: "monospace", fontSize: "0.72rem",
                       fontWeight: 800, color: "var(--sky-red)",
                       background: "rgba(224,32,32,0.08)",
                       padding: "0.3rem 0.55rem", borderRadius: "4px" }}>
-                      {n}
+                      {step.n}
                     </span>
                   </div>
                   <div>
                     <h3 style={{ fontSize: "0.95rem", fontWeight: 700,
                       marginBottom: "0.4rem", color: "var(--sky-text)" }}>
-                      {title}
+                      {step.title}
                     </h3>
                     <p style={{ color: "var(--sky-gray)", fontSize: "0.85rem",
-                      lineHeight: 1.65 }}>{desc}</p>
+                      lineHeight: 1.65 }}>{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -467,7 +454,7 @@ export default function Home({ t }: { t: any }) {
             <p style={{ color: "var(--sky-muted)", fontSize: "0.8rem",
               fontWeight: 600, letterSpacing: "0.1em",
               textTransform: "uppercase", marginBottom: "1.5rem" }}>
-              Every Pack Ships Certified
+              {t.certifications?.sub}
             </p>
             <div style={{ display: "flex", justifyContent: "center",
               gap: "1rem", flexWrap: "wrap", marginBottom: "1.25rem" }}>
@@ -493,30 +480,28 @@ export default function Home({ t }: { t: any }) {
           <p style={{ color: "var(--sky-red)", fontWeight: 600,
             letterSpacing: "0.1em", textTransform: "uppercase",
             fontSize: "0.8rem", marginBottom: "0.5rem" }}>
-            Talk to a Battery Engineer
+            {t.contact?.title}
           </p>
           <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
             marginBottom: "0.75rem" }}>
-            Talk to a Battery Engineer
+            {t.contact?.title}
           </h2>
-          <p style={{ color: "var(--sky-gray)", marginBottom: "2.5rem",
-            lineHeight: 1.7 }}>
-            Not sure what battery you need? That's okay. Send your requirements
-            or CAD drawing and we'll help figure it out.
+          <p style={{ color: "var(--sky-gray)", marginBottom: "2.5rem", lineHeight: 1.7 }}>
+            {t.contact?.sub}
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {[
-              { id: "c-name", type: "text", placeholder: "Full Name *" },
-              { id: "c-company", type: "text", placeholder: "Company / Project Name" },
-              { id: "c-email", type: "email", placeholder: "Email Address *" },
+              { id: "c-name", type: "text", placeholder: t.contact?.name + " *" },
+              { id: "c-company", type: "text", placeholder: t.contact?.company },
+              { id: "c-email", type: "email", placeholder: t.contact?.email + " *" },
             ].map(({ id, type, placeholder }) => (
               <input key={id} id={id} type={type}
                 placeholder={placeholder} style={inputStyle} />
             ))}
 
             <textarea id="c-building"
-              placeholder="What are you building? *" rows={3}
+              placeholder={t.contact?.building + " *"} rows={3}
               style={{ ...inputStyle, resize: "vertical" }} />
 
             <label style={{ display: "flex", alignItems: "center",
@@ -525,9 +510,8 @@ export default function Home({ t }: { t: any }) {
               <input type="checkbox"
                 checked={unknownSpecs}
                 onChange={(e) => setUnknownSpecs(e.target.checked)}
-                style={{ accentColor: "var(--sky-red)",
-                  width: "16px", height: "16px" }} />
-              I don't know my battery specs yet
+                style={{ accentColor: "var(--sky-red)", width: "16px", height: "16px" }} />
+              {t.contact?.unknown}
             </label>
 
             {!unknownSpecs && (
@@ -535,34 +519,30 @@ export default function Home({ t }: { t: any }) {
                 <p style={{ color: "var(--sky-muted)", fontSize: "0.8rem",
                   fontWeight: 600, textTransform: "uppercase",
                   letterSpacing: "0.05em", marginTop: "0.5rem" }}>
-                  Battery Requirements (fill what you know)
+                  Battery Requirements
                 </p>
-                <div style={{ display: "grid",
-                  gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
                   {[
-                    { id: "c-voltage", placeholder: "Voltage (V)" },
-                    { id: "c-energy", placeholder: "Energy / Capacity" },
-                    { id: "c-current", placeholder: "Peak Current (A)" },
-                    { id: "c-temp", placeholder: "Operating Temperature" },
-                    { id: "c-quantity", placeholder: "Expected Quantity" },
+                    { id: "c-voltage", placeholder: t.contact?.voltage },
+                    { id: "c-energy", placeholder: t.contact?.energy },
+                    { id: "c-current", placeholder: t.contact?.current },
+                    { id: "c-temp", placeholder: t.contact?.temp },
+                    { id: "c-quantity", placeholder: t.contact?.quantity },
                   ].map(({ id, placeholder }) => (
                     <input key={id} id={id} type="text"
                       placeholder={placeholder}
-                      style={{ ...inputStyle,
-                        padding: "0.75rem 1rem",
-                        fontSize: "0.88rem" }} />
+                      style={{ ...inputStyle, padding: "0.75rem 1rem", fontSize: "0.88rem" }} />
                   ))}
                 </div>
               </>
             )}
 
             <textarea id="c-message"
-              placeholder="Additional notes, constraints, or questions"
-              rows={4}
+              placeholder={t.contact?.message} rows={4}
               style={{ ...inputStyle, resize: "vertical" }} />
 
             <p style={{ color: "var(--sky-gray)", fontSize: "0.85rem" }}>
-              Or email us directly:{" "}
+              {t.contact?.email_direct}:{" "}
               <a href="mailto:ken@skpbattery.com"
                 style={{ color: "var(--sky-red)", fontWeight: 600 }}>
                 ken@skpbattery.com
@@ -575,7 +555,7 @@ export default function Home({ t }: { t: any }) {
                 borderRadius: "8px", fontSize: "1rem",
                 fontWeight: 700, cursor: sending ? "not-allowed" : "pointer",
                 width: "100%", transition: "background 0.2s" }}>
-              {sending ? "Sending..." : "Talk to an Engineer →"}
+              {sending ? "Sending..." : `${t.contact?.send} →`}
             </button>
           </div>
         </section>
@@ -590,10 +570,10 @@ export default function Home({ t }: { t: any }) {
               display: "block", margin: "0 auto 1rem" }} />
           <p style={{ fontWeight: 500, color: "var(--sky-gray)",
             marginBottom: "0.5rem", fontSize: "0.9rem" }}>
-            Battery Engineering Partner for Hardware Startups & Engineering Firms
+            {t.footer?.tagline}
           </p>
           <p style={{ marginBottom: "0.5rem" }}>
-            © {new Date().getFullYear()} Sky Power (US). All rights reserved.
+            © {new Date().getFullYear()} Sky Power (US). {t.footer?.rights}
           </p>
           <p>
             <a href="mailto:ken@skpbattery.com"
